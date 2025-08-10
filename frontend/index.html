@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Refugee Housing AI — Home</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="home">
+  <!-- NAV -->
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="nav-left container" style="display:flex;align-items:center;gap:18px;">
+  <div class="logo" aria-hidden="true" style="display:flex;align-items:center;gap:10px;">
+    <div class="mark">
+      <img src="./image.png" alt="Refugee Housing AI Logo" style="height:48px; width:auto;">
+    </div>
+    <div>
+      <div style="font-size:2rem;font-weight:700;">SHELTER MIND</div>
+      <div style="font-size:1rem;color:#fff9f4;margin-top:3px;opacity:0.9;">Refugee Housing AI Blueprints for Humanitarian Relief</div>
+    </div>
+  </div>
+</div>
+
+
+    <div style="display:flex;align-items:center;gap:16px;padding-right:20px;">
+      <ul class="nav-links" role="menu" aria-hidden="false">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="generate.html">Generate</a></li>
+        <li><a href="blueprints.html">Saved Blueprints</a></li>
+        <li><a href="about.html">About</a></li>
+        <!-- Login removed -->
+      </ul>
+
+      <button class="nav-toggle" aria-label="Toggle menu" id="navToggle">☰</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+  <div class="hero-card card">
+    <h1>SAFE, PRACTICAL & CULTURALLY AWARE HOUSING PLANS - IN MINUTES</h1>
+    <p>Create shelter blueprints tailored to local materials, climate, budget and cultural needs. Designed for NGOs, relief workers, and local builders.</p>
+    <div style="display:flex;gap:12px;margin-top:18px;">
+      <a class="btn btn-primary" href="generate.html">Generate Blueprint</a>
+      <a class="btn btn-secondary" href="blueprints.html">See Saved Plans</a>
+    </div>
+
+    <div class="mt-8">
+      <h4 style="color:#5a3f36;margin-bottom:8px;">Why this helps</h4>
+      <ul style="color:#6b4a41;list-style:disc;margin-left:18px;">
+        <li>Fast, field-friendly designs using available materials.</li>
+        <li>Culturally sensitive layout suggestions (privacy, prayer, cooking).</li>
+        <li>Budget-aware sizing and safety notes for hazard-prone regions.</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Quick demo removed -->
+</section>
+
+    <section class="mt-8">
+      <div class="card">
+        <h3 style="color:#4e342e;">Mission</h3>
+        <p style="color:#6b4a41;margin-top:8px;">
+          Refugee Housing AI helps relief organizations convert local constraints into immediate, practical shelter designs — saving time and improving safety in emergencies.
+        </p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="small">© 2025 Refugee Housing AI - Built for humanitarian use</div>
+    </footer>
+  </main>
+
+  <div class="modal-backdrop" id="modal" role="dialog" aria-hidden="true">
+    <div class="modal" role="document" aria-modal="true">
+      <button class="close" id="modalClose" aria-label="Close">&times;</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

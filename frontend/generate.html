@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Generate Blueprint — Refugee Housing AI</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="generate">
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="nav-left container" style="display:flex;align-items:center;gap:18px;">
+      <div class="logo" aria-hidden="true" style="display:flex;align-items:center;gap:10px;">
+    <div class="mark">
+      <img src="./image.png" alt="Refugee Housing AI Logo" style="height:48px; width:auto;">
+    </div><div style="font-size:2rem;font-weight:700;">SHELTER MIND</div></div>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:16px;padding-right:20px;">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="generate.html" class="active">Generate</a></li>
+        <li><a href="blueprints.html">Saved Blueprints</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle2">☰</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="card">
+      <h2 style="color:#4e342e;margin-bottom:6px;">Generate Blueprint</h2>
+      <p class="small">Fill the form and click <strong>Generate Blueprint</strong>. The plan will appear below and will be saved.</p>
+
+      <form id="blueprintForm" class="mt-8" aria-live="polite">
+        <div class="form-grid">
+          <div class="full">
+            <label for="location">Location (city/region)</label>
+            <input id="location" name="location" placeholder="e.g., Cox's Bazar, Bangladesh" required />
+          </div>
+
+          <div class="">
+            <label for="materials">Materials (comma-separated)</label>
+            <input id="materials" name="materials" placeholder="bamboo, tin sheets, nails" required />
+          </div>
+
+          <div class="">
+            <label for="climate">Climate</label>
+            <select id="climate" name="climate">
+              <option value="tropical">Tropical</option>
+              <option value="arid">Arid</option>
+              <option value="cold">Cold</option>
+              <option value="temperate">Temperate</option>
+            </select>
+          </div>
+
+          <div class="full">
+            <label for="culture">Cultural preferences (optional)</label>
+            <input id="culture" name="culture" placeholder="e.g., separate kitchen, prayer space" />
+          </div>
+
+          <div class="">
+            <label for="budget">Budget (optional)</label>
+            <input id="budget" name="budget" placeholder="e.g., 3000 USD or 200000 INR" />
+          </div>
+
+          <div class="">
+            <label>&nbsp;</label>
+            <button id="generateBtn" class="btn" type="submit">Generate Blueprint</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section id="result" class="card mt-8" style="display:none;">
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <h3 style="color:#4e342e;">Generated Plan</h3>
+        <div class="small" id="resultMeta"></div>
+      </div>
+
+      <div id="planText" class="plan mt-8"> </div>
+
+      <div style="margin-top:12px;display:flex;gap:10px;">
+        <button id="saveLocal" class="btn secondary">Download JSON</button>
+        <button id="viewPretty" class="btn">Open in Modal</button>
+      </div>
+    </section>
+
+    <section id="history" class="mt-8" style="display:none;">
+  <h3 style="color:#4e342e;">Saved Blueprints</h3>
+  <div id="historyList"></div>
+</section>
+
+
+    <footer class="site-footer">© 2025 Refugee Housing AI</footer>
+  </main>
+
+  <div class="modal-backdrop" id="modal" role="dialog" aria-hidden="true">
+    <div class="modal" role="document" aria-modal="true">
+      <button class="close" id="modalClose" aria-label="Close">&times;</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
